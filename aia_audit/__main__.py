@@ -2,8 +2,8 @@
 import sys, threading
 from aia_audit.lib import gui
 from aia_audit.lib.config import Config
-from flask import Flask
 from aia_audit.website.engine import Website
+from flask import Flask
 from time import sleep
 
 version = "0.0.1"
