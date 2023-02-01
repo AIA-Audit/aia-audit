@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 import sys, threading
 from aia_audit.lib import gui
+from aia_audit.lib.config import Config
 from flask import Flask
 from aia_audit.website.engine import Website
 from time import sleep
 
+version = "0.0.1"
 
 def main():
     try:
@@ -13,10 +15,12 @@ def main():
         sleep(5)
         gui.clear()
         print("[*] Starting the AIA Audit framework ... Done!")
-        #TODO: DATABASE LOAD / CREATE (SQLITE)
+        #Start the config
+        config = Config()
+        config.config_start()
         #Start the website
         website = Website()
-        website.website_start()
+        website.website_start(config)
         #Prevent the main thread from exiting
         while True:
             sleep(1)
