@@ -3,5 +3,9 @@ from aia_audit.website.engine import app
 from flask import render_template
 
 @app.route('/')
-def hello_world():
+def home():
+    return render_template('index.html')
+
+@app.route('/about')
+def about():
     return render_template('index.html')
