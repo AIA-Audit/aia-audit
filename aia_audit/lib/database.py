@@ -2,14 +2,19 @@ import sqlite3
 
 class Database:
 
-    db_file = None
+    db_file = "aia_audit/data/database.db"
     conn = None
     cursor = None
 
-    def __init__(self, db_file):
-        self.db_file = db_file
+    def __init__(self):
         self.conn = sqlite3.connect(self.db_file)
         self.cursor = self.conn.cursor()
+
+    def check_database(self):
+        self.cursor.execute("SELECT name FROM sqlite_master WHERE type='table'")
+        if not self.cursor.fetchall():
+            self.create_table("scans", "id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, date TEXT, status TEXT, type TEXT, target TEXT")
+            self.create_table("settings", "id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, value TEXT")
 
     def create_table(self, table_name, columns):
         self.cursor.execute("CREATE TABLE IF NOT EXISTS {} ({})".format(table_name, columns))
@@ -18,7 +23,6 @@ class Database:
     def insert(self, table_name, columns, values):
         self.cursor.execute("INSERT INTO {} ({}) VALUES ({})".format(table_name, columns, values))
         self.conn.commit()
-
 
     def select(self, table_name, columns, where=None):
         if where:
@@ -34,6 +38,15 @@ class Database:
     def delete(self, table_name, where):
         self.cursor.execute("DELETE FROM {} WHERE {}".format(table_name, where))
         self.conn.commit()
+
+    def query(self, query):
+        self.cursor.execute(query)
+        self.conn.commit()
+
+    def query_select(self, query):
+        self.cursor.execute(query)
+        print(query)
+        return self.cursor.fetchall()
 
     def close(self):
         self.conn.close()
