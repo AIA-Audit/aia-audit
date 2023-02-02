@@ -9,7 +9,7 @@ from flask import Flask
 from time import sleep
 
 
-version = "0.0.1"
+version = "0.1"
 status = TOOL_STATUS_WAITING
 
 def main():
