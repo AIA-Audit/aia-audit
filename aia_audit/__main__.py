@@ -9,24 +9,22 @@ from flask import Flask
 from time import sleep
 
 
-version = "0.1"
+config = None
+database = None
+website = None
 status = TOOL_STATUS_WAITING
+version = "0.1"
 
 def main():
     try:
-        #Start the GUI
+        #Show loading screen
         gui.show_loading()
         sleep(5)
         gui.clear()
-        print("[*] Starting the AIA Audit framework ... Done!")
-        #Start the config
+        #Load the tool configuration and start the website engine
         config = Config()
-        config.config_start()
-        #Start the database
         database = Database("aia_audit/data/database.db")
-        #Start the website
         website = Website(config, database)
-        website.website_start()
         gui.show_running(config.website_address, config.website_port)
         #Prevent the main thread from exiting
         while not status == TOOL_STATUS_SHUTDOWN:

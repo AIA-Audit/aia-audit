@@ -7,6 +7,9 @@ class Config:
     website_password = ""
     configured = "no"
 
+    def __init__(self):
+        self.config_start()
+
     def config_start(self):
         #Check if config file exists and if not create it
         if not os.path.isfile("aia_audit/data/config.json"):
