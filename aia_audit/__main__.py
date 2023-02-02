@@ -21,6 +21,7 @@ def main():
         #Start the website
         website = Website()
         website.website_start(config)
+        gui.show_running(config.website_address, config.website_port)
         #Prevent the main thread from exiting
         while True:
             sleep(1)
