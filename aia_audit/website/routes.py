@@ -7,11 +7,8 @@ import json
 
 #User Routes
 @app.route('/')
-def home():
-    return render_template('index.html')
-
 @app.route('/about')
-def about():
+def show_frontend():
     return render_template('index.html')
 
 #API routes
@@ -20,5 +17,11 @@ def tool_info():
     data = {
         "status": main.status,
         "version": main.version
+    }
+    return data
+
+@app.route('/api/data/statistics/total-scans')
+def total_scans():
+    data = {
     }
     return data
