@@ -2,12 +2,15 @@
 import sys, threading
 from aia_audit.lib import gui
 from aia_audit.lib.config import Config
+from aia_audit.constants import *
 from aia_audit.lib.database import Database
 from aia_audit.website.engine import Website
 from flask import Flask
 from time import sleep
 
+
 version = "0.0.1"
+status = TOOL_STATUS_WAITING
 
 def main():
     try:
@@ -26,7 +29,7 @@ def main():
         website.website_start()
         gui.show_running(config.website_address, config.website_port)
         #Prevent the main thread from exiting
-        while True:
+        while not status == TOOL_STATUS_SHUTDOWN:
             sleep(1)
 
     except KeyboardInterrupt:
