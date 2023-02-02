@@ -2,8 +2,6 @@ import os, sys, time
 
 from colorama import Fore
 
-is_loading = True
-
 def show_loading():
     clear()
     print(Fore.RESET +
@@ -15,7 +13,7 @@ def show_loading():
     loading_status = 0
     loading_tick = 0
     icon_states = ['\\', '|', '/', '-']
-    global is_loading
+    is_loading = True
     while is_loading:
         original_str = "\r[*] Starting the AIA Audit framework ..."
         for i in range(0, len(original_str)):
@@ -49,3 +47,19 @@ def show_loading():
 
 def clear():
     os.system('cls' if os.name=='nt' else 'clear')
+
+def show_running(ip, port):
+    clear()
+    print(Fore.RESET +
+          '      _______ _______________    ' + Fore.BLUE + '   _______         ______________ _____ \n' + Fore.RESET +
+          '      ___    |____  _/___    |   ' + Fore.BLUE + '   ___    |____  ________  /___(_)__  /_\n' + Fore.RESET +
+          '      __  /| | __  /  __  /| |   ' + Fore.BLUE + '   __  /| |_  / / /_  __  / __  / _  __/\n' + Fore.RESET +
+          '      _  ___ |__/ /   _  ___ |   ' + Fore.BLUE + '   _  ___ |/ /_/ / / /_/ /  _  /  / /_  \n' + Fore.RESET +
+          '      /_/  |_|/___/   /_/  |_|   ' + Fore.BLUE + '   /_/  |_|\\__,_/  \\__,_/   /_/   \\__/  \n' + Fore.RED)
+    print(Fore.RESET +
+          "       =[ " + Fore.RED + "AIA Audit Framework v0.1 " + Fore.RESET + "                       ]\n" +
+          "+ -- --=[ 2230 exploits - 1177 auxiliary - 398 post       ]\n" +
+          "+ -- --=[ 867 payloads - 45 encoders - 11 nops            ]\n" +
+          "+ -- --=[ 9 evasion                                       ]\n" +
+          "                                                           \n" +
+          "       =[ " + Fore.RED + "Website running on http://" + ip + ":" + port + Fore.RESET + "          ]\n" + Fore.RED)
