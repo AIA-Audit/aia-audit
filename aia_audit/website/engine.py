@@ -8,15 +8,21 @@ from aia_audit.website.routes import *
 
 class Website:
 
+    config = None
+    database = None
     thread = None
+
+    def __init__(self, config, database):
+        self.config = config
+        self.database = database
 
     def _disabled_server_banner(*args, **kwargs):
         pass
 
-    def website_start(self, config):
+    def website_start(self):
         logging.getLogger("werkzeug").disabled = True
         cli.show_server_banner = self._disabled_server_banner
-        thread = threading.Thread(target=lambda: app.run(host=config.website_address, port=config.website_port, debug=False, use_reloader=False))
+        thread = threading.Thread(target=lambda: app.run(host=self.config.website_address, port=self.config.website_port, debug=False, use_reloader=False))
         thread.setDaemon(True)
         thread.start()
         self.thread = thread

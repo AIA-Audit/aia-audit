@@ -2,6 +2,7 @@
 import sys, threading
 from aia_audit.lib import gui
 from aia_audit.lib.config import Config
+from aia_audit.lib.database import Database
 from aia_audit.website.engine import Website
 from flask import Flask
 from time import sleep
@@ -18,9 +19,11 @@ def main():
         #Start the config
         config = Config()
         config.config_start()
+        #Start the database
+        database = Database("aia_audit/data/database.db")
         #Start the website
-        website = Website()
-        website.website_start(config)
+        website = Website(config, database)
+        website.website_start()
         gui.show_running(config.website_address, config.website_port)
         #Prevent the main thread from exiting
         while True:
