@@ -1,5 +1,6 @@
 from aia_audit.website.engine import app
 from flask import render_template
+from aia_audit.website.backend.controllers import scancontroller
 import aia_audit.__main__ as main
 import json
 
@@ -23,5 +24,27 @@ def tool_info():
 @app.route('/api/data/statistics/total-scans')
 def total_scans():
     data = {
+        "total_scans": scancontroller.count_all_scans()
+    }
+    return data
+
+@app.route('/api/data/statistics/total-devices')
+def total_devices():
+    data = {
+        "total_devices": scancontroller.count_all_scans()
+    }
+    return data
+
+@app.route('/api/data/statistics/total-vulnerabilities')
+def total_vulnerabilities():
+    data = {
+        "total_vulnerabilities": scancontroller.count_all_scans()
+    }
+    return data
+
+@app.route('/api/data/statistics/last-scan')
+def last_scan():
+    data = {
+        "last-scan": scancontroller.count_all_scans()
     }
     return data
