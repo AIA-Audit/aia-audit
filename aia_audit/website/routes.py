@@ -13,6 +13,11 @@ def show_frontend():
     return render_template('index.html')
 
 #API routes
+@app.route('/api/stop-tool')
+def stop_tool():
+    main.status = main.TOOL_STATUS_SHUTDOWN
+    return "success"
+
 @app.route('/api/data/tool-info')
 def tool_info():
     data = {
