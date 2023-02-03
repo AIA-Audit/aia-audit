@@ -24,7 +24,7 @@
                 </div>
                 <div class="bg-gray-50 px-5 py-3">
                     <div class="text-sm">
-                        <a href="#" class="font-medium text-green-700 hover:text-green-900">View all</a>
+                        <a href="#" class="font-medium text-blue-700 hover:text-blue-900">View all</a>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="bg-gray-50 px-5 py-3">
                     <div class="text-sm">
-                        <a href="#" class="font-medium text-green-700 hover:text-green-900">View all</a>
+                        <a href="#" class="font-medium text-blue-700 hover:text-blue-900">View all</a>
                     </div>
                 </div>
             </div>
@@ -76,7 +76,7 @@
                 </div>
                 <div class="bg-gray-50 px-5 py-3">
                     <div class="text-sm">
-                        <a href="#" class="font-medium text-green-700 hover:text-green-900">View all</a>
+                        <a href="#" class="font-medium text-blue-700 hover:text-blue-900">View all</a>
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@
                 </div>
                 <div class="bg-gray-50 px-5 py-3">
                     <div class="text-sm">
-                        <a href="#" class="font-medium text-green-700 hover:text-green-900">View all</a>
+                        <a href="#" class="font-medium text-blue-700 hover:text-blue-900">View all</a>
                     </div>
                 </div>
             </div>

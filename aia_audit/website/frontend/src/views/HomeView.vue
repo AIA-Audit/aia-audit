@@ -1,7 +1,3 @@
-<script setup>
-import Stats from "@/components/Home/Stats.vue";
-</script>
-
 <template>
     <main class="flex-1 pb-8">
         <!-- Page header -->
@@ -12,16 +8,13 @@ import Stats from "@/components/Home/Stats.vue";
                       <h1 class="ml-3 text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:leading-9">Dashboard</h1>
                     </div>
                     <div class="mt-6 flex space-x-3 md:mt-0 md:ml-4">
-                        <button type="button" class="inline-flex items-center rounded-md border border-transparent bg-green-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">New Scan</button>
+                        <button type="button" class="inline-flex items-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">New Scan</button>
                     </div>
                 </div>
             </div>
         </div>
-    
         <div class="mt-8">
-    
             <Stats />
-            
             <h2 class="mx-auto mt-8 px-4 text-lg font-medium leading-6 text-gray-900 sm:px-6 lg:px-8">Last scans</h2>
             <!-- Activity list (smallest breakpoint only) -->
             <div class="shadow sm:hidden">
@@ -87,7 +80,7 @@ import Stats from "@/components/Home/Stats.vue";
                                           <span class="font-medium text-gray-900">Basic</span>
                                         </td>
                                         <td class="whitespace-nowrap px-6 py-4 text-right text-sm text-gray-500">
-                                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 capitalize">Complete</span>
+                                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 capitalize">Complete</span>
                                         </td>
                                     </tr>
     
@@ -116,3 +109,25 @@ import Stats from "@/components/Home/Stats.vue";
         </div>
     </main>
 </template>
+
+<script setup>
+    import Button from 'primevue/button';
+    import Dialog from 'primevue/dialog';
+</script>
+
+<script>
+import Stats from "@/components/Home/Stats.vue";
+
+export default {
+    name: 'Home',
+    components: {
+        Stats
+    },
+    data() {
+        return {
+        }
+    },
+    methods: {
+    }
+}
+</script>
