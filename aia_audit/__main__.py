@@ -16,7 +16,7 @@ def main():
     try:
         #Show loading screen
         gui.show_loading()
-        sleep(5)
+        #sleep(5)
         gui.clear()
         #Load the tool configuration and start the website engine
         global config, database_path, status
@@ -28,6 +28,7 @@ def main():
         #Prevent the main thread from exiting
         while not status == TOOL_STATUS_SHUTDOWN:
             sleep(1)
+        print("[*] Shutting down the AIA Audit framework ... Done!")
 
     except KeyboardInterrupt:
         gui.clear()
