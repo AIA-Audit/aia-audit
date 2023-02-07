@@ -8,6 +8,7 @@ import json
 
 #User Routes
 @app.route('/')
+@app.route('/new/scan')
 @app.route('/about')
 def show_frontend():
     return render_template('index.html')
@@ -29,7 +30,7 @@ def tool_info():
 @app.route('/api/data/statistics/total-scans')
 def total_scans():
     data = {
-        "total_scans": scancontroller.count_all_scans()
+        "total_scans": 24
     }
     return data
 
