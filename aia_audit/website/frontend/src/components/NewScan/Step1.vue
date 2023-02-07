@@ -24,7 +24,7 @@ const scanType = [
 <template>
     <div>
         <ul role="list" class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <li v-for="(sType,index) in scanType" @click="$emit('setScanType', index+1)" class="col-span-1 divide-y divide-gray-200 rounded-lg bg-white hover:bg-gray-200 shadow" :class="sType.status === 'Disabled' ? 'cursor-not-allowed' : 'cursor-pointer'">
+            <li v-for="(sType,index) in scanType" @click="$emit('setScanType', index+1)" class="col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow" :class="sType.status === 'Disabled' ? 'hover:bg-gray-200  cursor-not-allowed' : 'hover:bg-green-50 cursor-pointer'">
                 <div class="flex w-full items-center justify-between space-x-6 p-6">
                     <div class="flex-1">
                         <div class="flex items-center space-x-3">

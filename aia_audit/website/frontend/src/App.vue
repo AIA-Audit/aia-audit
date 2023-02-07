@@ -3,9 +3,11 @@ import { RouterLink, RouterView } from "vue-router";
 import Button from 'primevue/button';
 import Dialog from 'primevue/dialog';
 import LogoSVG from "./assets/logo.svg?component";
+import Toast from 'primevue/toast';
 </script>
 
 <template>
+    <Toast />
     <!-- Left application (left Modal) -->
     <Dialog header="AIA Audit v0.1" v-model:visible="displayLeftModal" :breakpoints="{'960px': '75vw', '640px': '90vw'}" :style="{width: '50vw'}" :modal="true">
       <p>
