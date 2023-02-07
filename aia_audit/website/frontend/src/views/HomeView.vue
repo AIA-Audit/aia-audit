@@ -1,18 +1,4 @@
 <template>
-    <main class="flex-1 pb-8">
-        <!-- Page header -->
-        <div class="bg-white shadow">
-            <div class="px-4 sm:px-6 lg:mx-auto lg:px-8">
-                <div class="py-6 md:flex md:items-center md:justify-between">
-                    <div class="min-w-0 flex-1">                  
-                      <h1 class="ml-3 text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:leading-9">Dashboard</h1>
-                    </div>
-                    <div class="mt-6 flex space-x-3 md:mt-0 md:ml-4">
-                        <button type="button" class="inline-flex items-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">New Scan</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="mt-8">
             <Stats />
             <h2 class="mx-auto mt-8 px-4 text-lg font-medium leading-6 text-gray-900 sm:px-6 lg:px-8">Last scans</h2>
@@ -58,10 +44,10 @@
                             <table class="min-w-full divide-y divide-gray-200">
                                 <thead>
                                     <tr>
-                                        <th class="bg-gray-50 px-6 py-3 text-left text-sm font-semibold text-gray-900" scope="col">Name</th>
-                                        <th class="bg-gray-50 px-6 py-3 text-right text-sm font-semibold text-gray-900" scope="col">Date</th>
-                                        <th class="hidden bg-gray-50 px-6 py-3 text-left text-sm font-semibold text-gray-900 md:block" scope="col">Type</th>
-                                        <th class="bg-gray-50 px-6 py-3 text-right text-sm font-semibold text-gray-900" scope="col">Status</th>
+                                        <th class="bg-gray-700 px-6 py-3 text-left text-sm font-semibold text-white" scope="col">Name</th>
+                                        <th class="bg-gray-700 px-6 py-3 text-right text-sm font-semibold text-white" scope="col">Date</th>
+                                        <th class="hidden bg-gray-700 px-6 py-3 text-left text-sm font-semibold text-white md:block" scope="col">Type</th>
+                                        <th class="bg-gray-700 px-6 py-3 text-right text-sm font-semibold text-white" scope="col">Status</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-gray-200 bg-white">
@@ -69,7 +55,7 @@
                                         <td class="w-full max-w-0 whitespace-nowrap px-6 py-4 text-sm text-gray-900">
                                             <div class="flex">
                                                 <a href="#" class="group inline-flex space-x-2 truncate text-sm">
-                                                    <p class="truncate text-gray-500 group-hover:text-gray-900">My very first scan</p>
+                                                    <p class="truncate text-gray-800 group-hover:text-gray-900">My very first scan</p>
                                                 </a>
                                             </div>
                                         </td>
@@ -80,7 +66,7 @@
                                           <span class="font-medium text-gray-900">Basic</span>
                                         </td>
                                         <td class="whitespace-nowrap px-6 py-4 text-right text-sm text-gray-500">
-                                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 capitalize">Complete</span>
+                                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 capitalize">Complete</span>
                                         </td>
                                     </tr>
     
@@ -107,7 +93,6 @@
                 </div>
             </div>
         </div>
-    </main>
 </template>
 
 <script setup>
