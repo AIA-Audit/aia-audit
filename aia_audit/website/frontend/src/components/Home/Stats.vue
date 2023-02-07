@@ -16,7 +16,7 @@
                             <dl>
                                 <dt class="truncate text-sm font-medium text-gray-500">Scans Performed</dt>
                                 <dd>
-                                    <div class="text-lg font-medium text-gray-900">0</div>
+                                    <div class="text-lg font-medium text-gray-700">{{ scansPerformed }}</div>
                                 </dd>
                             </dl>
                         </div>
@@ -42,7 +42,7 @@
                             <dl>
                                 <dt class="truncate text-sm font-medium text-gray-500">Devices scanned</dt>
                                 <dd>
-                                    <div class="text-lg font-medium text-gray-900">0</div>
+                                    <div class="text-lg font-medium text-gray-700">{{ devicesScanned }}</div>
                                 </dd>
                             </dl>
                         </div>
@@ -68,7 +68,7 @@
                             <dl>
                                 <dt class="truncate text-sm font-medium text-gray-500">Vulnerabilities found</dt>
                                 <dd>
-                                    <div class="text-lg font-medium text-gray-900">0</div>
+                                    <div class="text-lg font-medium text-gray-700">{{ vulnerabilitiesFound }}</div>
                                 </dd>
                             </dl>
                         </div>
@@ -94,7 +94,7 @@
                             <dl>
                                 <dt class="truncate text-sm font-medium text-gray-500">Last scan performed</dt>
                                 <dd>
-                                    <div class="text-lg font-medium text-gray-900">06/10/2022</div>
+                                    <div class="text-lg font-medium text-gray-700">{{ lastScanDate }}</div>
                                 </dd>
                             </dl>
                         </div>
@@ -110,3 +110,31 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            scansPerformed: 0,
+            devicesScanned: 0,
+            vulnerabilitiesFound: 0,
+            lastScanDate: '06/10/2022'
+        }
+    },
+    mounted () {
+        /* Fetch data from API */
+        this.axios.get('/api/data/statistics/total-scans')
+            .then(response => {
+                this.scansPerformed = response.data.total_scans
+            })
+        this.axios.get('/api/data/statistics/total-devices')
+            .then(response => {
+                this.devicesScanned = response.data.total_devices
+            })
+        this.axios.get('/api/data/statistics/total-vulnerabilities')
+            .then(response => {
+                this.vulnerabilitiesFound = response.data.total_vulnerabilities
+            })
+    }
+}
+</script>
