@@ -34,19 +34,26 @@ import LogoSVG from "./assets/logo.svg?component";
                     </div>
                     <nav class="mt-5 flex flex-1 flex-col divide-y divide-blue-600 overflow-y-auto" aria-label="Sidebar">
                         <div class="space-y-1 px-2">
-                            <a href="#" class="bg-blue-800 text-white group flex items-center px-2 py-2 text-sm leading-6 font-medium rounded-md" aria-current="page">
+                            <router-link :to="{ name: 'home' }" active-class="bg-gray-800" class="text-blue-100 hover:text-white hover:bg-blue-600 group flex items-center px-2 py-2 text-sm leading-6 font-medium rounded-md" aria-current="page">
                               <svg class="mr-4 h-6 w-6 flex-shrink-0 text-blue-200 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                               </svg>                                              
                               Dashboard
-                            </a>
+                            </router-link>
+
+                            <router-link :to="{ name: 'new-scan' }" active-class="bg-gray-800" class="text-blue-100 hover:text-white hover:bg-blue-600 group flex items-center px-2 py-2 text-sm leading-6 font-medium rounded-md">
+                              <svg class="mr-4 h-6 w-6 flex-shrink-0 text-blue-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 10.5v6m3-3H9m4.06-7.19l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
+                              </svg>                                                                
+                              New Scan
+                            </router-link>
         
-                            <a href="#" class="text-blue-100 hover:text-white hover:bg-blue-600 group flex items-center px-2 py-2 text-sm leading-6 font-medium rounded-md">
+                            <router-link :to="{ name: 'scans' }" active-class="bg-gray-800" class="text-blue-100 hover:text-white hover:bg-blue-600 group flex items-center px-2 py-2 text-sm leading-6 font-medium rounded-md">
                               <svg class="mr-4 h-6 w-6 flex-shrink-0 text-blue-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                               </svg>                                    
                               My Scans
-                            </a>
+                            </router-link>
         
                             <a href="#" class="text-blue-100 hover:text-white hover:bg-blue-600 group flex items-center px-2 py-2 text-sm leading-6 font-medium rounded-md">
                               <svg class="mr-4 h-6 w-6 flex-shrink-0 text-blue-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
@@ -71,19 +78,19 @@ import LogoSVG from "./assets/logo.svg?component";
                         </div>
                         <div class="mt-6 pt-6">
                             <div class="space-y-1 px-2">
-                                <a href="#" class="group flex items-center rounded-md px-2 py-2 text-sm font-medium leading-6 text-blue-100 hover:bg-blue-600 hover:text-white">
+                                <router-link :to="{ name: 'about' }" active-class="bg-gray-800" class="group flex items-center rounded-md px-2 py-2 text-sm font-medium leading-6 text-blue-100 hover:bg-blue-600 hover:text-white">
                                   <svg class="mr-4 h-6 w-6 text-blue-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
                                   </svg>                              
                                   About
-                                </a>
+                                </router-link>
         
-                                <a href="#" class="group flex items-center rounded-md px-2 py-2 text-sm font-medium leading-6 text-blue-100 hover:bg-blue-600 hover:text-white">
+                                <router-link :to="{ name: 'help' }" active-class="bg-gray-800" class="group flex items-center rounded-md px-2 py-2 text-sm font-medium leading-6 text-blue-100 hover:bg-blue-600 hover:text-white">
                                     <svg class="mr-4 h-6 w-6 text-blue-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
                                   </svg> 
                                   Help
-                                </a>
+                                </router-link>
         
                             </div>
                         </div>
@@ -95,13 +102,13 @@ import LogoSVG from "./assets/logo.svg?component";
         </div>
     
         <div class="flex flex-1 flex-col lg:pl-64">
-          <div class="flex space-betweeen h-16 flex-shrink-0 border-b border-gray-200 bg-gray-50 lg:border-none px-4">
+          <div class="flex space-betweeen h-16 flex-shrink-0 border-b border-gray-200 bg-gray-100 lg:border-none px-4">
               <div class="flex items-center">
                 <span :class="statusClass" class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium capitalize">{{ statusText }}</span>
               </div>
               <div class="flex flex-1 justify-end px-4 sm:px-6 w-100 lg:px-8">
                 <div class="ml-4 flex items-center md:ml-6">
-                    <button type="button" class="rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                    <button type="button" class="rounded-full bg-white p-1 text-gray-700 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                       <span class="sr-only">View notifications</span>
                       <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
@@ -109,13 +116,12 @@ import LogoSVG from "./assets/logo.svg?component";
                     </button>
                 </div>
                 <div class="ml-4 flex items-center md:ml-6">
-                  <button @click="displayExitModal = true;" type="button" class="rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                  <button @click="displayExitModal = true;" type="button" class="rounded-full bg-white p-1 text-gray-700 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                     <span class="sr-only">View notifications</span>
                     <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       <path stroke-linecap="round" stroke-linejoin="round" d="M9 9.563C9 9.252 9.252 9 9.563 9h4.874c.311 0 .563.252.563.563v4.874c0 .311-.252.563-.563.563H9.564A.562.562 0 019 14.437V9.564z" />
                     </svg>
-                    
                   </button>
               </div>
               </div>
@@ -125,7 +131,26 @@ import LogoSVG from "./assets/logo.svg?component";
     </div>
     <!-- Main content-->
     <div class="pl-64">
-      <router-view></router-view>
+      <main class="flex-1 pb-8">
+        <!-- Page header -->
+        <div class="bg-white shadow">
+            <div class="px-4 sm:px-6 lg:mx-auto lg:px-8">
+                <div class="py-6 md:flex md:items-center md:justify-between">
+                    <div class="min-w-0 flex-1">                  
+                      <h1 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:leading-9">{{ $route.meta.title }}</h1>
+                    </div>
+                    <template v-if="$route.name != 'new-scan'">
+                    <div class="mt-6 flex space-x-3 md:mt-0 md:ml-4">
+                        <router-link :to="{ name: 'new-scan' }" class="inline-flex items-center rounded-md border border-transparent bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">New Scan</router-link>
+                    </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+        <div class="mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+          <router-view/>
+        </div>
+      </main>
     </div>
 </template>
 
@@ -162,7 +187,7 @@ import LogoSVG from "./assets/logo.svg?component";
     computed: {
       statusClass() {
         return {
-          'bg-gray-100 text-gray-800': this.status === 0,
+          'bg-gray-700 text-white': this.status === 0,
           'bg-yellow-100 text-yellow-800': this.status === 1,
           'bg-blue-100 bg-green-800': this.status === 2
         }
