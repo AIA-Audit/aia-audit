@@ -27,7 +27,7 @@ const props = defineProps({
             <button @click="$emit('prevStep')" class="mx-2 text-white bg-blue-500 hover:text-white hover:bg-blue-600 group flex items-center px-2 py-2 text-sm leading-6 font-medium rounded-md">
                 Prev Step
             </button>
-            <template v-if="currentStep < 4">
+            <template v-if="currentStep < 3">
             <button @click="$emit('nextStep')" class="mx-2 text-white bg-blue-500 hover:text-white hover:bg-blue-600 group flex items-center px-2 py-2 text-sm leading-6 font-medium rounded-md">
                 Next Step
             </button>
