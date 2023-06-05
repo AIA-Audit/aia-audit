@@ -1,0 +1,15 @@
+{
+    "name": "SSH Audit",
+    "dirname": "ssh-audit",
+    "description": "ssh-audit is a tool for ssh server auditing.",
+    "author": "Ismael Semmar Galvez",
+    "version": "0.1",
+    "module_type": [1, 2],
+    "module_settings": {},
+    "module_dependencies": {
+        "name": "ssh-audit",
+        "check": "ssh-audit",
+        "install": "snap install ssh-audit"
+    },
+    "module_import": "aia_audit.modules.ssh-audit"
+}
