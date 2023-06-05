@@ -1,0 +1,23 @@
+{
+    "name": "Nmap Scan",
+    "dirname": "nmap",
+    "description": "Nmap Scan for open ports and services",
+    "author": "Andreu Gisbert",
+    "version": "0.1",
+    "module_type": [1, 2],
+    "module_settings": {
+        "0" : {
+            "name": "Agresive Scan",
+            "type": "checkbox",
+            "value": false
+        }
+    },
+    "module_dependencies": {
+        "0" : {
+            "name": "nmap",
+            "check": "nmap --version",
+            "install": "sudo apt-get install nmap"
+        }
+    },
+    "module_import": "aia_audit.modules.nmap"
+}

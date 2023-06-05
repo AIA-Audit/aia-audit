@@ -46,3 +46,7 @@
 .p-paginator .p-paginator-pages .p-paginator-page.p-highlight{
     color: #1d4ed8!important;
 }
+
+.p-datatable .p-datatable-tbody>tr>td .p-row-editor-cancel:focus, .p-datatable .p-datatable-tbody>tr>td .p-row-editor-init:focus, .p-datatable .p-datatable-tbody>tr>td .p-row-editor-save:focus, .p-datatable .p-datatable-tbody>tr>td .p-row-toggler:focus{
+    box-shadow: 0 0 0 1px green !important;
+}
