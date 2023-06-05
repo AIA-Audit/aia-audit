@@ -1,0 +1,15 @@
+{
+    "name": "Enum4Linux",
+    "dirname": "enum4Linux",
+    "description": "enum4Linux is a tool for enumerating information from Windows and Samba systems.",
+    "author": "Andreu Monforte",
+    "version": "0.1",
+    "module_type": [1, 2],
+    "module_settings": {},
+    "module_dependencies": {
+        "name": "enum4Linux",
+        "check": "enum4linux",
+        "install": "snap install enum4linux"
+    },
+    "module_import": "aia_audit.modules.enum4Linux"
+}
