@@ -8,3 +8,41 @@
 .p-button.p-button-link:enabled:focus{
     color: #000!important;
 }
+
+.p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
+    background-color: #1d4ed8!important;
+}
+
+.p-toast .p-toast-message.p-toast-message-error .p-toast-message-icon, .p-toast .p-toast-message.p-toast-message-error .p-toast-icon-close{
+    color: #ffffff !important;
+}
+
+.p-toast{
+    opacity: 1 !important;
+}
+
+.p-toast .p-toast-message.p-toast-message-error{
+    color: #ffffff !important;
+    background-color: #ff4d4d !important;
+}
+
+.p-toast .p-toast-message.p-toast-message-success{
+    color: #ffffff !important;
+    background-color: #39bd19 !important;
+}
+
+.p-toast .p-toast-message.p-toast-message-success .p-toast-message-icon, .p-toast .p-toast-message.p-toast-message-success .p-toast-icon-close{
+    color: #ffffff !important;
+}
+
+.p-toast .p-toast-message .p-toast-message-content{
+    border: 0px !important;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight{
+    border-color: #1d4ed8!important;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight{
+    color: #1d4ed8!important;
+}

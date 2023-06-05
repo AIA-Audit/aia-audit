@@ -1,5 +1,5 @@
 <template>
-    <div class="grid grid-cols-2 px-4 py-4 shadow-md rounded-md">
+    <div class="grid lg:grid-cols-2 px-4 py-4 rounded-md">
         <!-- Target Settings-->
         <div>
             <label class="block text-md font-medium text-blue-500 mb-4">
@@ -30,6 +30,7 @@
                 <input v-model="target" type="text" id="target" class="w-3/4 border border-gray-300 text-gray-700 text-sm rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" :placeholder="targetPlaceholder" required>
             </div>
         </div>
+        <template v-if="scanType == 2">
         <!-- Modules Settings -->
         <div>
             <label class="block text-md font-medium text-blue-500 mb-4 w-3/4">
@@ -50,6 +51,7 @@
                 </PickList>
             </div>
         </div>
+        </template>
     </div>
 </template>
 
@@ -65,6 +67,7 @@ export default {
         }
     },
     props: {
+        scanType: Number,
         target: String,
         targetType: Number,
         modules: Array
@@ -72,7 +75,7 @@ export default {
     computed: {
         targetPlaceholder() {
             if(this.targetType == 1) return 'Example: 192.168.203.100';
-            else return 'Example: 192.168.203.0/24';
+            else return 'Example: 192.168.203.0';
         }
     },
 }

@@ -2,8 +2,11 @@ import { createRouter, createWebHistory } from "vue-router";
 import AboutView from "../views/AboutView.vue";
 import HelpView from "../views/HelpView.vue";
 import HomeView from "../views/HomeView.vue";
+import ScanView from "../views/ScanView.vue";
 import MyScansView from "../views/MyScansView.vue";
+import ModulesView from "../views/ModulesView.vue";
 import NewScanView from "../views/NewScanView.vue";
+import SettingsView from "../views/SettingsView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,10 +25,22 @@ const router = createRouter({
       meta: { title: 'New Scan' },
     },
     {
+      path: "/scan/:id",
+      name: "scan",
+      component: ScanView,
+      meta: { title: 'Scan results' },
+    },
+    {
       path: "/scans",
       name: "scans",
       component: MyScansView,
       meta: { title: 'My Scans' },
+    },
+    {
+      path: "/modules",
+      name: "modules",
+      component: ModulesView,
+      meta: { title: 'Modules' },
     },
     {
       path: "/about",
@@ -38,6 +53,12 @@ const router = createRouter({
       name: "help",
       component: HelpView,
       meta: { title: 'Help' },
+    },
+    {
+      path: "/settings",
+      name: "settings",
+      component: SettingsView,
+      meta: { title: 'Settings', ignore_setup: true },
     },
   ],
 });

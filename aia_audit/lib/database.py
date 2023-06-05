@@ -16,27 +16,19 @@ class Database:
             self.create_tables()
 
     def create_tables(self):
-        self.create_table("scan_types", "id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT")
-        self.create_table("scan_types_modules", "id INTEGER PRIMARY KEY AUTOINCREMENT, scan_type INTEGER, module INTEGER, FOREIGN KEY(scan_type) REFERENCES scan_types(id), FOREIGN KEY(module) REFERENCES modules(id)")
-        self.create_table("module_types", "id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT")
-        self.create_table("modules", "id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, description TEXT, type INTEGER, FOREIGN KEY(type) REFERENCES module_types(id)")
-        self.create_table("scans", "id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, date TEXT, status TEXT, type TEXT, target TEXT")
+        self.create_table("modules", "id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, version TEXT, settings TEXT, import TEXT")
+        self.create_table("scans", "id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, target TEXT, start_time TEXT, end_time TEXT, results TEXT, devices INTEGER, vulnerabilities INTEGER")
         self.create_table("settings", "id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, value TEXT")
+        self.create_table("telegram_chats", "id INTEGER PRIMARY KEY AUTOINCREMENT, chat_id TEXT")
+        self.populate_tables()
 
     def populate_tables(self):
-        self.insert("scan_types", "name", "'Simple'")
-        self.insert("scan_types", "name", "'Complete'")
-        self.insert("scan_types", "name", "'Custom'")
-
-        self.insert("module_types", "name", "'Information Gathering'")
-        self.insert("module_types", "name", "'Vulnerability Scanning'")
-        self.insert("module_types", "name", "'Exploitation'")
-        self.insert("module_types", "name", "'Post Exploitation'")
-        self.insert("module_types", "name", "'Reporting'")
-        self.insert("module_types", "name", "'Other'")
-
-        self.insert("modules", "name, description, type", "'Nmap', 'Nmap is a free and open source utility for network discovery and security auditing. Many systems and network administrators also find it useful for tasks such as network inventory, managing service upgrade schedules, and monitoring host or service uptime.', 1")
-
+        self.insert("settings", "name, value", "'config_status', '0'")
+        self.insert("settings", "name, value", "'website_address', 'localhost'")
+        self.insert("settings", "name, value", "'website_port', '5000'")
+        self.insert("settings", "name, value", "'telegram_notify', '0'")
+        self.insert("settings", "name, value", "'telegram_token', ''")
+        print("[*] Database tables populated ... Done!")
 
     def create_table(self, table_name, columns):
         self.cursor.execute("CREATE TABLE IF NOT EXISTS {} ({})".format(table_name, columns))

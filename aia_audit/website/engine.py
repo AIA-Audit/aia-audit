@@ -13,8 +13,8 @@ class Website:
     thread = None
 
     def __init__(self, config, database):
-        self.config = config
         self.database = database
+        self.config = config
         self.website_start()
 
     def _disabled_server_banner(*args, **kwargs):
