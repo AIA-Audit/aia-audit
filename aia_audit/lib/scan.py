@@ -11,12 +11,14 @@ class Scan:
     target = None
     targetType = None
     modules = None
-    results = []
+    results = None
     total_devices = 0
-    total_devices_array = []
+    total_devices_array = None
     total_vulnerabilities = 0
 
     def __init__(self, target, targetType, modules, type):
+        self.results = []
+        self.total_devices_array = []
         self.target = target
         self.targetType = targetType
         self.modules = modules

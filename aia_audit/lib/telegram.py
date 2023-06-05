@@ -31,7 +31,8 @@ class Telegram:
         echo_handler = MessageHandler(None, self.echo)
         self.dispatcher.add_handler(echo_handler)
         self.updater.start_polling()
-        self.mass_send_message("Telegram bot started")
+        # Pure DEBUG code
+        self.mass_send_message("🛡️ Telegram bot started and you are registered to receive notifications from AIA Audit")
 
     def stop(self):
         self.updater.stop()
@@ -47,7 +48,7 @@ class Telegram:
         scan_url += database.query_select("SELECT value FROM settings WHERE name = 'website_address'")[0][0] + ":" + database.query_select("SELECT value FROM settings WHERE name = 'website_port'")[0][0] + "/scan/" + str(last_scan_id)
         message = "🔍 Scan finished! ✅\n\n"
         message += f"{device_count} devices 📱🖥️ were scanned, and {vulnerability_count} vulnerabilities 🛡️ were found.\n\n"
-        message += f"🔗 You can access the scan results: {scan_url}.\n\n"
+        message += f"🔗 You can access the scan results: {scan_url} \n\n"
         message += "Thank you for using our scanning service! If you have any questions or need further assistance, feel free to contact us. 💪😊"
         self.mass_send_message(message)
 

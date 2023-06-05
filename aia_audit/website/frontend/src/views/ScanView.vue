@@ -15,22 +15,22 @@
                         <Column header="Stats">
                             <template #body="slotProps">
                                 <template v-if="countModuleVulnerabilitiesBySeverity(slotProps, 'info') > 0">
-                                    <span class="text-xs font-bold px-4 py-2 text-white rounded-md bg-blue-500">
+                                    <span class="text-xs font-bold px-4 py-2 text-white rounded-md bg-blue-500 mr-2">
                                         {{ countModuleVulnerabilitiesBySeverity(slotProps, "info") }}
                                     </span>
                                 </template>
                                 <template v-if="countModuleVulnerabilitiesBySeverity(slotProps, 'low') > 0">
-                                    <span class="text-xs font-bold px-4 py-2 text-white rounded-md bg-green-500">
+                                    <span class="text-xs font-bold px-4 py-2 text-white rounded-md bg-green-500 mr-2">
                                         {{ countModuleVulnerabilitiesBySeverity(slotProps, "low") }}
                                     </span>
                                 </template>
                                 <template v-if="countModuleVulnerabilitiesBySeverity(slotProps, 'medium') > 0">
-                                    <span class="text-xs font-bold px-4 py-2 text-white rounded-md bg-yellow-500">
+                                    <span class="text-xs font-bold px-4 py-2 text-white rounded-md bg-yellow-500 mr-2">
                                         {{ countModuleVulnerabilitiesBySeverity(slotProps, "medium") }}
                                     </span>
                                 </template>
                                 <template v-if="countModuleVulnerabilitiesBySeverity(slotProps, 'high') > 0">
-                                    <span class="text-xs font-bold px-4 py-2 text-white rounded-md bg-orange-500">
+                                    <span class="text-xs font-bold px-4 py-2 text-white rounded-md bg-orange-500 mr-2">
                                         {{ countModuleVulnerabilitiesBySeverity(slotProps, "high") }}
                                     </span>
                                 </template>
@@ -55,7 +55,7 @@
                                         <Column header="Severity">
                                             <template #body="slotProps3">
                                                 <span class="text-sm font-bold px-4 py-2 text-white rounded-md"
-                                                    :class="slotProps3.data.severity == 'critical' ? 'text-red-500' : slotProps3.data.severity == 'high' ? 'bg-orange-500' : slotProps3.data.severity == 'medium' ? 'bg-yellow-500' : slotProps3.data.severity == 'low' ? 'bg-green-500' : 'bg-blue-500'">
+                                                    :class="slotProps3.data.severity == 'critical' ? 'bg-red-500' : slotProps3.data.severity == 'high' ? 'bg-orange-500' : slotProps3.data.severity == 'medium' ? 'bg-yellow-500' : slotProps3.data.severity == 'low' ? 'bg-green-500' : 'bg-blue-500'">
                                                     {{ slotProps3.data.severity }}
                                                 </span>
                                             </template>
