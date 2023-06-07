@@ -28,7 +28,6 @@ def main():
         config = Config()
         telegram = Telegram()
         if telegram.check_enabled() == "True":
-            print("[*] Telegram notifications are enabled")
             telegram.open()
         Website(config, database)
         gui.show_running(config.website_address, config.website_port)
