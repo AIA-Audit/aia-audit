@@ -67,7 +67,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Preview Images</a></li>
+    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -82,7 +82,7 @@
 ## About The Project
 
 <a href="https://aia-audit.com">
-  <img src="images/preview.png" alt="preview-image" width="50%">
+  <img src="images/preview.png" alt="preview-image" width="300">
 </a>
 
 We are a group of 3 students from IES EBRE. Our project (AIA Audit), is a tool that can perform an audit to a host or network. We are going to add into AIA as many features as possible.
@@ -145,14 +145,14 @@ To get a local copy up and running follow these simple example steps.
 
 
 <!-- USAGE EXAMPLES -->
-## Preview Images
+## Usage
 
 <a href="https://aia-audit.com">
-  <img src="images/preview-2.png" alt="preview-image2" width="50%">
+  <img src="images/preview2.png" alt="preview-image2" width="300">
 </a>
 
 <a href="https://aia-audit.com">
-  <img src="images/preview-3.png" alt="preview-image3" width="50%">
+  <img src="images/preview3.png" alt="preview-image3" width="300">
 </a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -225,14 +225,13 @@ Project Link: [https://github.com/AIA-Audit/AIA-DEV](https://github.com/AIA-Audi
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+- **Flask**: Web development framework for Python.
+- **Tailwind**: CSS framework used for UI layout and styling.
+- **VueJS**: JavaScript framework for building interactive components.
+- **Docker**: Platform for creating and deploying applications in containers.
+- **NMAP**: Network exploration and security auditing tool.
+- **Enum4Linux**: Tool for enumerating resources on Linux servers.
+- **SSH-Audit**: Tool for auditing SSH configurations.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
