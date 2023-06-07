@@ -28,7 +28,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="#">
+  <a href="https://aia-audit.com">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -81,7 +81,13 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<a href="https://aia-audit.com">
+  <img src="images/preview2.png" alt="preview-image2" width="300">
+</a>
+
+<a href="https://aia-audit.com">
+  <img src="images/preview3.png" alt="preview-image3" width="300">
+</a>
 
 We are a group of 3 students from IES EBRE. Our project (AIA Audit), is a tool that can perform an audit to a host or network. We are going to add into AIA as many features as possible.
 
@@ -124,18 +130,18 @@ To get a local copy up and running follow these simple example steps.
 ### Installation
 
 
-1. Get a free API Key at [https://www.shodan.io](https://www.shodan.io)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone git@github.com:AIA-Audit/AIA-DEV.git
    ```
-3. Install dependencies
+2. Install all the tool dependencies for python
    ```sh
    pip install -r requirements.txt
    ```
-4. Enter your API KEY from Shodan in `config.json
-   ```js
-   "SHODAN_API_KEY": "ENTER YOUR API",
+3. Create /data/ folder inside the subfolder aia_audit.
+4. Run the tool and start using it
+   ```sh
+   python3 aia-audit.py
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -145,9 +151,9 @@ To get a local copy up and running follow these simple example steps.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+<a href="https://aia-audit.com">
+  <img src="images/preview2.png" alt="preview-image" width="300">
+</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -156,13 +162,15 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
+- [x] Design basic GUI
+- [x] Design basic frontend
+- [x] Code a backend for the website
+- [x] Code an engine for the scan modules
+- [x] Add a Telegram bot functionality
+- [x] Code some modules as example
+- [x] Bugfixing, improvements..
 - [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
@@ -232,15 +240,15 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/AIA-Audit/AIA-DEV/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/AIA-Audit/AIA-DEV.svg?style=for-the-badge
+[contributors-url]: https://github.com/AIA-Audit/AIA-DEV/graphs/contributors.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/AIA-Audit/AIA-DEV.svg?style=for-the-badge
 [forks-url]: https://github.com/AIA-Audit/AIA-DEV/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/AIA-Audit/AIA-DEV.svg?style=for-the-badge
 [stars-url]: https://github.com/AIA-Audit/AIA-DEV/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/AIA-Audit/AIA-DEV.svg?style=for-the-badge
 [issues-url]: https://github.com/AIA-Audit/AIA-DEV/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/AIA-Audit/AIA-DEV.svg?style=for-the-badge
 [license-url]: https://github.com/AIA-Audit/AIA-DEV/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
