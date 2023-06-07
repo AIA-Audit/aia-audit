@@ -81,9 +81,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<a href="https://aia-audit.com">
-  <img src="images/preview.png" alt="preview-image" width="300">
-</a>
+<img src="images/preview.png" alt="preview-image" width="50%">
 
 We are a group of 3 students from IES EBRE. Our project (AIA Audit), is a tool that can perform an audit to a host or network. We are going to add into AIA as many features as possible.
 
@@ -147,13 +145,9 @@ To get a local copy up and running follow these simple example steps.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-<a href="https://aia-audit.com">
-  <img src="images/preview2.png" alt="preview-image2" width="300">
-</a>
-
-<a href="https://aia-audit.com">
-  <img src="images/preview3.png" alt="preview-image3" width="300">
-</a>
+<img src="images/preview.png" alt="preview-image-1" width="100%">
+<img src="images/preview-2.png" alt="preview-image-2" width="100%">
+<img src="images/preview-3.png" alt="preview-image-3" width="100%">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
